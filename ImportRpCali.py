@@ -1,9 +1,17 @@
 import pandas as pd
-import matplotlib.pyplot as plt
-from wordcloud import WordCloud, STOPWORDS
+#import matplotlib.pyplot as plt
+#from wordcloud import WordCloud, STOPWORDS
+
+"""
+Data created:
+    df_CA_Reli_raw.csv: the raw list of religious POI in CA.
+
+The number of religious places for POI in CA is 18510.
+"""
 
 
-cols_list = ['safegraph_place_id','location_name', 
+
+cols_list = ['safegraph_place_id','location_name',
              'naics_code', 'latitude', 'longitude',
              'city', 'region', 'postal_code', ]
 
@@ -40,11 +48,11 @@ df_CA_Reli.to_csv('/Volumes/LaCie/cg-data/working_data/df_CA_Reli_raw.csv')
 
 
 
-text = " ".join(name for name in df_CA_Reli.location_name) # all words in location_name
-print ("There are {0} words across all location_name for all {1} poi.".format(len(text), df_CA_Reli.shape[0]))
-wordcloud = WordCloud(background_color="white").generate(text)
+#text = " ".join(name for name in df_CA_Reli.location_name) # all words in location_name
+#print ("There are {0} words across all location_name for all {1} poi.".format(len(text), df_CA_Reli.shape[0]))
+#wordcloud = WordCloud(background_color="white").generate(text)
 
-plt.figure(figsize=(11,11))
-plt.imshow(wordcloud, interpolation='bilinear')
-plt.axis("off")
-plt.show()
+#plt.figure(figsize=(11,11))
+#plt.imshow(wordcloud, interpolation='bilinear')
+#plt.axis("off")
+#plt.show()
