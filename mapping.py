@@ -20,7 +20,7 @@ def make_map_plot(df_,
                   tiles = 'OpenStreetMap',
                   map_width = 700,
                   map_height = 400,
-                  marker_type= 'circle', 
+                  marker_type= 'circle',
                   map_plot=None,
                   verbose=False):
     # Parameters:
@@ -85,9 +85,22 @@ def add_circle_marker_to_map(map_plot, row, radius_col, radius_mod, color, fill_
   return(None)
 ###########################################################################################
 
-dtypes = {'postal_code':str,'stateFIPS':str,'countyFIPS':str,'poi_cbg':str}
+#dtypes = {'postal_code':str,'stateFIPS':str,'countyFIPS':str,'poi_cbg':str}
+#list_ca = pd.read_csv('/Volumes/LaCie/cg-data/working_data/df_CA_Reli_raw.csv',
+#                      index_col = 0, dtype = dtypes)
+#Almeda = list_ca.loc[list_ca.countyName == 'Alameda County',:]
 
-list_ca = pd.read_csv('/Volumes/LaCie/cg-data/working_data/df_CA_Reli_raw.csv',
-                      index_col = 0, dtype = dtypes)
-Almeda = list_ca.loc[list_ca.countyName == 'Alameda County',:]
-make_map_plot(Almeda, fill_color='red', fill_opacity=1)
+raw_df = pd.read_csv('/Volumes/LaCie/cg-data/working_data/df_CA_Reli_raw.csv',
+                         index_col = 0, dtype ={'postal_code':str, 'stateFIPS':str,
+                                            'countyFIPS':str, 'poi_cbg':str})
+BaseList = pd.read_csv('/Volumes/LaCie/cg-data/working_data/ClassificationCA.csv',
+                       usecols = ['safegraph_place_id','shutdown', 'large'])
+BaseList = BaseList.merge(raw_df, how = 'left', on = 'safegraph_place_id')
+
+
+Alameda = BaseList.loc[BaseList.countyName == 'Alameda County',:]
+Alameda_shutdown = Alameda[Alameda.shutdown == 1]
+Alameda_open = Alameda[Alameda.shutdown == 0]
+
+make_map_plot(Alameda_open, zoom_start=10, fill_color='blue', fill_opacity=1)
+make_map_plot(Alameda_shutdown, zoom_start=10, fill_color='red', fill_opacity=1)
