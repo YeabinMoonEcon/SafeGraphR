@@ -7,6 +7,8 @@ Created on Mon Jul 13 10:12:08 2020
 
 Assume that the residents in Alameda County attends the church in California
 
+Data created:
+    RegionDist.csv: summarize regional distribution
 """
 
 import pandas as pd
