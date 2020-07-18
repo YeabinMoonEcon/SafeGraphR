@@ -4,13 +4,6 @@
 Created on Sat Jul 18 13:04:16 2020
 
 @author: yeabinmoon
-    The center of the circle points to the worship place in Alameda county.
-    The size of the circle implies the number of visitors.
-Data created:
-    Map1.html: the number of visistors is scaled by X 4.5
-               Red circle: previous pandemic
-               blue circle: during pandemic
-
 """
 
 import pandas as pd
@@ -18,6 +11,7 @@ import webbrowser
 import folium
 
 BaseVisits = pd.read_csv('/Volumes/LaCie/cg-data/working_data/BaseVisits.csv', index_col = 0)
+
 Alameda = BaseVisits.loc[BaseVisits.countyName == 'Alameda County',:]
 
 Alameda['before'] = Alameda.iloc[:,11:20].mean(axis = 1)
@@ -27,6 +21,9 @@ Alameda_map = Alameda[['location_name', 'latitude', 'longitude', 'before', 'afte
 
 Alameda_map.before = Alameda_map.before*5
 Alameda_map.after = Alameda_map.after*5
+Alameda_map.to_csv('/Volumes/LaCie/cg-data/working_data/map_test.csv')
+
+
 
 
 
@@ -59,4 +56,4 @@ for i in range(len(Alameda_map)):
 
 
 
-m.save('/Volumes/LaCie/cg-data/working_data/Map1.html')    
+m.save('/Volumes/LaCie/cg-data/working_data/test2.html')    
