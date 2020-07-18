@@ -18,19 +18,19 @@ import time
 import json
 
 
-raw_df = pd.read_csv('/Volumes/LaCie/cg-data/working_data/df_CA_Reli_raw.csv', 
+raw_df = pd.read_csv('/Volumes/LaCie/cg-data/working_data/df_CA_Reli_raw.csv',
                          index_col = 0, dtype ={'postal_code':str, 'stateFIPS':str,
                                             'countyFIPS':str, 'poi_cbg':str})
-list_files = ['patterns-part1.csv', 'patterns-part2.csv','patterns-part3.csv', 
+list_files = ['patterns-part1.csv', 'patterns-part2.csv','patterns-part3.csv',
               'patterns-part4.csv']
 month_list = ['01','02','03','04','05','06','07','08','09','10','11','12']
-list_col = ['safegraph_place_id', 'raw_visitor_counts', 
+list_col = ['safegraph_place_id', 'raw_visitor_counts',
             'visitor_home_cbgs',  'popularity_by_day']
 
 month_CA_pop_day = raw_df.copy()
 
 """
-Following block takes a lot of computing power and time. 
+Following block takes a lot of computing power and time.
 Go to line 62!
 """
 
@@ -39,11 +39,11 @@ for month in month_list:
     start_time = time.time()
     df = pd.DataFrame()
     for file in list_files:
-        temp_df = pd.read_csv('/Volumes/LaCie/cg-data/Pattern/2019/' + month +'/' + file, 
+        temp_df = pd.read_csv('/Volumes/LaCie/cg-data/Pattern/2019/' + month +'/' + file,
                               usecols = ['safegraph_place_id', 'popularity_by_day'])
         temp_df.rename(columns = {'popularity_by_day': '2019-'+month}, inplace = True)
-        df = pd.concat([df,temp_df], axis = 0)    
-    month_CA_pop_day = month_CA_pop_day.merge(df, how = 'left', 
+        df = pd.concat([df,temp_df], axis = 0)
+    month_CA_pop_day = month_CA_pop_day.merge(df, how = 'left',
                                       on = 'safegraph_place_id')
     test = month_CA_pop_day.copy()
     test = test[['safegraph_place_id', '2019-'+ month]]
@@ -61,12 +61,12 @@ for month in month_list:
         df_total = pd.concat([df_total,temp_df], axis = 0, ignore_index = True)
     print("Done",month,'!')
     print("%f seconds" % (time.time() - start_time))
-    
-df_total.to_csv('/Volumes/LaCie/cg-data/religious_org/pop_day.csv')
+
+df_total.to_csv('/Volumes/LaCie/cg-data/working_data/pop_day.csv')
 # pop_day.csv
 
 
-df_total = pd.read_csv('/Volumes/LaCie/cg-data/religious_org/pop_day.csv', 
+df_total = pd.read_csv('/Volumes/LaCie/cg-data/religious_org/pop_day.csv',
                        index_col = 0)
 # Find the most crowded day
 temp_df = df_total.groupby(['safegraph_place_id','date'])['visits'].sum()
@@ -82,4 +82,3 @@ temp_lists = temp_df.loc[temp_ind,:]
 
 WorshipPlace = temp_lists.loc[:,['safegraph_place_id']]
 WorshipPlace.to_csv('/Volumes/LaCie/cg-data/working_data/WorshipPlace.csv')
-

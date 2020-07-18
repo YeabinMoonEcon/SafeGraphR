@@ -116,3 +116,28 @@ Open = Open.reset_index()
 Open = Open.pivot(index= 'ZIP', columns = 'date', values = 'visits')
 Open.fillna(0, inplace = True)
 Open.to_csv('/Volumes/LaCie/cg-data/working_data/Open.csv')
+
+
+total.fillna(0, inplace = True)
+total.loc[:,'before'] = total.iloc[:,0:8].mean(axis = 1)
+total.loc[:,'after'] = total.iloc[:,9:15].min(axis = 1)
+
+
+
+large = AlamedaCounty.loc[AlamedaCounty.large == 1,:]
+large = large.groupby(['date', 'ZIP'])['visits'].sum()
+large = large.reset_index()
+large = large.pivot(index= 'ZIP', columns = 'date', values = 'visits')
+large.fillna(0, inplace = True)
+
+total.loc[:,'instrument'] = (large.iloc[:,0:8] / total.iloc[:,0:8]).mean(axis = 1)
+
+df_reg = total[['before','after','instrument']]
+df_reg.reset_index(inplace = True)
+df_reg.fillna(0, inplace = True)
+df_reg.to_csv('/Volumes/LaCie/cg-data/working_data/df_reg.csv')
+
+
+a = (large.iloc[:,0:8] / total.iloc[:,0:8])
+num = large.iloc[:,0:8]
+den = total.iloc[:,0:8]
