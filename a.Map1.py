@@ -14,7 +14,6 @@ Data created:
 """
 
 import pandas as pd
-import webbrowser
 import folium
 
 BaseVisits = pd.read_csv('/Volumes/LaCie/cg-data/working_data/BaseVisits.csv', index_col = 0)
@@ -59,4 +58,4 @@ for i in range(len(Alameda_map)):
 
 
 
-m.save('/Volumes/LaCie/cg-data/working_data/Map1.html')    
+m.save('/Volumes/LaCie/cg-data/working_data/Map1.html')
