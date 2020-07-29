@@ -44,7 +44,7 @@ temp_df.rename(columns = {'CBGFIPS':'poi_cbg'}, inplace = True)
 
 df_CA_Reli = df_CA_Reli.merge(temp_df, how = 'left', on = 'safegraph_place_id')
 df_CA_Reli.drop(columns = 'naics_code', inplace = True)
-df_CA_Reli.to_csv('/Volumes/LaCie/cg-data/working_data/df_CA_Reli_raw.csv')
+df_CA_Reli.to_csv('/Users/yeabinmoon/Dropbox (UH-ECON)/Thesis/output/data/df_CA_Reli_raw.csv')
 
 
 

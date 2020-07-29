@@ -1,0 +1,207 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nyt/global//global/global}
+  \entry{becker_human_1986}{article}{}
+    \name{author}{2}{}{%
+      {{hash=BGS}{%
+         family={Becker},
+         familyi={B\bibinitperiod},
+         given={Gary\bibnamedelima S},
+         giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=TN}{%
+         family={Tomes},
+         familyi={T\bibinitperiod},
+         given={Nigel},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BGSTN1}
+    \strng{fullhash}{BGSTN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1986}
+    \field{labeldatesource}{}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{abstract}{%
+    This paper develops a model of the transmission of earnings, assets, and
+  consumption from parents to descendants. The model assumes utility-maximizing
+  parents who are concerned about the welfare of their children. The degree of
+  intergenerational mobility is determined by the interaction of this
+  utility-maximizing behavior with investment and consumption opportunities in
+  different gene rations and with different kinds of luck. The authors examine
+  a number of empirical studies for different countries. Regression to the mean
+  in earnings in rich countries appears to be rapid. Almost all the earnings
+  advantages or disadvantages of ancestors are wiped out in three generations.
+  Copyright 1986 by University of Chicago Press.%
+    }
+    \field{number}{3}
+    \field{pages}{S1\bibrangedash 39}
+    \field{title}{Human Capital and the Rise and Fall of Families}
+    \verb{url}
+    \verb http://ideas.repec.org/a/ucp/jlabec/v4y1986i3ps1-39.html
+    \endverb
+    \field{volume}{4}
+    \field{journaltitle}{Journal of Labor Economics}
+    \field{year}{1986}
+    \field{urlday}{15}
+    \field{urlmonth}{02}
+    \field{urlyear}{2012}
+  \endentry
+
+  \entry{case_lasting_2005}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CA}{%
+         family={Case},
+         familyi={C\bibinitperiod},
+         given={Anne},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=FA}{%
+         family={Fertig},
+         familyi={F\bibinitperiod},
+         given={Angela},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=PC}{%
+         family={Paxson},
+         familyi={P\bibinitperiod},
+         given={Christina},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \keyw{Adult, child, Child Welfare, Cohort Studies, Great Britain, Health
+  Status Indicators, Humans, Social Class}
+    \strng{namehash}{CAFAPC1}
+    \strng{fullhash}{CAFAPC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2005}
+    \field{labeldatesource}{}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    We quantify the lasting effects of childhood health and economic
+  circumstances on adult health, employment and socioeconomic status, using
+  data from a birth cohort that has been followed from birth into middle age.
+  Controlling for parental income, education and social class, children who
+  experience poor health have significantly lower educational attainment,
+  poorer health, and lower social status as adults. Childhood health and
+  circumstance appear to operate both through their impact on initial adult
+  health and economic status, and through a continuing direct effect of
+  prenatal and childhood health in middle age. Overall, our findings suggest
+  more attention be paid to health as a potential mechanism through which
+  intergenerational transmission of economic status takes place: cohort members
+  born into poorer families experienced poorer childhood health, lower
+  investments in human capital and poorer health in early adulthood, all of
+  which are associated with lower earnings in middle age-the years in which
+  they themselves become parents.%
+    }
+    \verb{doi}
+    \verb 10.1016/j.jhealeco.2004.09.008
+    \endverb
+    \field{issn}{0167-6296}
+    \field{number}{2}
+    \field{pages}{365\bibrangedash 389}
+    \field{shortjournal}{J Health Econ}
+    \field{title}{The lasting impact of childhood health and circumstance}
+    \verb{url}
+    \verb http://www.ncbi.nlm.nih.gov/pubmed/15721050
+    \endverb
+    \field{volume}{24}
+    \field{journaltitle}{Journal of health economics}
+    \field{month}{03}
+    \field{year}{2005}
+    \field{urlday}{13}
+    \field{urlmonth}{06}
+    \field{urlyear}{2012}
+  \endentry
+
+  \entry{conti_understanding_2010}{article}{}
+    \name{author}{2}{}{%
+      {{hash=CG}{%
+         family={Conti},
+         familyi={C\bibinitperiod},
+         given={Gabriella},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=HJJ}{%
+         family={Heckman},
+         familyi={H\bibinitperiod},
+         given={James\bibnamedelima J},
+         giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \keyw{health, education, genetics, treatment effects}
+    \strng{namehash}{CGHJJ1}
+    \strng{fullhash}{CGHJJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2010}
+    \field{labeldatesource}{}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{abstract}{%
+    In this article, we develop a framework for analyzing the causal effects of
+  interventions in the presence of latent factors that could affect outcomes,
+  even in the absence of interventions. This framework will be useful in
+  situations in which genes are included among the latent factors. We estimate
+  the model and study the early origins of observed later-life disparities by
+  education. We determine the role played by cognitive, noncognitive, and early
+  health endowments. We identify the causal effect of education on health and
+  health-related behaviors. We show that family background characteristics and
+  cognitive, noncognitive, and health endowments developed by age 10 are
+  important determinants of health disparities at age 30. We also show that not
+  properly accounting for personality traits results in overestimation of the
+  importance of cognitive ability in determining later health. Selection on
+  preexisting traits explains more than half of the observed differences in
+  poor health and obesity. Education has an important causal effect in
+  explaining differences in smoking rates. There are significant gender
+  differences. We go beyond the current literature, which typically estimates
+  mean effects, to compute distributions of treatment effects. We show that the
+  effect of education on health varies among individuals who are similar in
+  their observed characteristics, and how a mean effect can hide gains and
+  losses for different individuals. This analysis highlights the crucial role
+  played by promotion of good health at an early age and the importance of
+  prevention in the reduction of health disparities. We speculate about how the
+  model can be applied to genetic studies.%
+    }
+    \verb{doi}
+    \verb 10.1177/1745691610383502
+    \endverb
+    \field{issn}{1745-6916, 1745-6924}
+    \field{number}{5}
+    \field{pages}{585\bibrangedash 605}
+    \field{title}{Understanding the Early Origins of the Education–Health
+  Gradient}
+    \verb{url}
+    \verb http://pps.sagepub.com/content/5/5/585.abstract
+    \endverb
+    \field{volume}{5}
+    \field{journaltitle}{Perspectives on Psychological Science}
+    \field{day}{01}
+    \field{month}{09}
+    \field{year}{2010}
+    \field{urlday}{16}
+    \field{urlmonth}{02}
+    \field{urlyear}{2012}
+  \endentry
+\enddatalist
+\endinput
