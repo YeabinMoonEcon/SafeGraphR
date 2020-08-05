@@ -8,122 +8,161 @@
 \makeatother
 
 \begin{document}
+	
+	\title{Will Religious People Listen to Science?}
+	
+	\author{Yeabin Moon \thanks{See \href{https://fanwangecon.github.io/Tex4Econ/}{Tex4Econ} for more latex examples.} \\ \textit{Research Proposal}}
+	
+	
+	\maketitle
+	\begin{abstract}
+		\singlespacing filled\end{abstract}
+	\vfill
+	\pagebreak{}
+	
+	\section{Introduction}
+	
+	Since all the policies are new to most Americans, not most people easily accept voluntary protective behaviors. Also, regional leaderships often conflict with health experts' advises causing more confusions to general public. Hence, people need some tangible experience in which they feel the threat is real such as school closures. 
+	
+	I focus on the effect of attendance on religious services. When around the national emergency announcement, most big religious gatherings are turned into online platforms or canceled. But, there were physical gatherings regardless of the order. And it was possible since in many states religious gatherings were labeled as essential. 
+	
+	I think that many churchgoers go to the physical services as long as the churches are open, and the smaller churches people more stick to. Because many people church is an anchor of their life.
+	
+	People who attended the services disregard the danger since the church is closed (or believe that they feel safer because of attending it), and hence practice less social distancing than those who did not attend.
+	
+	In this project, I want to explore the effect of the service attendance on SD with health outcomes.
+	
+	The current pandemic raises the question how general pupblic assess the information.
+	
+	\pagebreak
+	\appendix
+	
+	\section{Identify Religious Worship places} 
+	
+%	\subsection{Initial Sample Selection}
+	
+	From the list of entire POIs\footnote{Use July 2020 release Core POI data.}, we select religious organizations using the NAICS code\footnote{813110.}. Among 234,665 POIs, it is not clear whether the selected POIs are served for religious gatherings such as a weekend service. We set two criteria to distinguish them. First, the number of weekly unique visitors are more than 15 on average prior to pandemic. Secondly, the most popular (crowded) day should be either Friday, Saturday or Sunday, because most major religious services happen between Friday and Sunday. There are 42,907 POIs meeting these requirements.  
+	
+	POIs are not evenly distributed among states.  On top, Texas has 4,585 POIs, and there are 8 POIs in Vermont at bottom. We select four states, Texas, California, Florida and Illinois, having the largest number POIs\footnote{TX: 4,585, CA: 4,009, FL: 2,438, IL: 2,303.}. Hence, there are 13,062 POIs in total of interest.
+	
+	We set the baseline period prior to pandemic, selecting the nine waves from 11.25.2019 to 1.20.2020. We calculate the average number of visitors during the periods and set the 45 as a threshold to indicate whether the POI is large or not. There are 2,794 large POIs and 10,268 small POIs, and total number of visitors in the two groups are similar. 
 
-\title{Will Religious People Listen to Science?}
-
-\author{Yeabin Moon \thanks{See \href{https://fanwangecon.github.io/Tex4Econ/}{Tex4Econ} for more latex examples.} \\ \textit{Research Proposal}}
-
-
-\maketitle
-\begin{abstract}
-\singlespacing filled\end{abstract}
-\vfill
-\pagebreak{}
-
-\section{Research Log}
-\subsection{Identify Religious Worship places} 
-
-First of all, using NAICS code, select religious POI in California. The number of POI in raw file is 18510. 
-
-It is not clear whether the selected POI is serving as a worship place. The main treatment is whether one attends the services or not, and hence it is important to distinguish the worship places from other purposes of religious POIs. The idea to find worship places is that most religious gatherings or services happen either Friday, Saturday or Sunday. Hence, we use Monthly Places Patterns series and figure out the most popular days in 2019 for all religious POIs, and select the POIs having Friday, Saturday or Sunday as the most popular days. The number of POIs is 11825.
-
-\subsection{Classify the  places} 
-
-The next step is to figure out the size of the POIs and whether they closes during the pandemic. Two things are worth to be mentioned. First, if the number of unique visitors are less than 4, SafeGraph does not reveal where the visitors' home census block because of privacy issues. The main point is how the visitors' behavior, not the religious places, we only keep the POIs having more than 4 unique visitors in 2020. Second, the baseline periods (prior to pandemic) are January and February. The pandemic period starts at March 6th. On March 6, San Francisco warns vulnerable residents to avoid outings and larger groups, businesses to suspend non-essential travel and consider telecommuting, and cancellation of all non-essential large events, and the city began restricting event size a few days later. By March 16, six Bay Area counties became the first in the nation to announce shelter-in-place orders and on March 19, the State of California became the first to mandate a state-wide order. Hence, to construct the baseline behavior we use 8 waves of the Weekly Places Patterns starting from 12.30.2019 to 2020.02.17\footnote{Last wave covers 2.17 to 2.23.}. For the pandemic periods, we use 4 waves starting from 2020.03.02 to 2020.03.23. 
-
-After removing the POIs having less than 4 unique visitors, the number of POIs are 8439. In terms of base period, the median number of visitors of the religious POIs is 14. Figure \ref{figure1} shows the percentile distribution of unique visitors in religious POIs of California. We choose 30, about 80 percentile, as the threshold indicating whether POIs are large or not. Figure \ref{figure2} indicates the average number of unique visitors in small and large POIs.
-
-Next, we classify the POIs which is closed during pandemic in the following ways. First, the number of unique visitors is zero during pandemic. Second, for the large POIs, the number of visitors fall down less than 5. Third, the attendance rate compared to base period is less than 5 percent.  
-
-\subsection{Regional distribution}
-SafeGraph shows the visitor's home census block for each POI. Hence, for each census block, we can examine how many residents attend a service happening at the religious POIs. For example, we can explore how many POIs are and their attendance in each census block every week. It is possible that a Californian attends the worship in different states. We will restrict the focus onto Alameda and San Francisco counties  which are very far from the border, so it won't be a concern. 
-
-
-
-
-
-
-\subsection{POI map}
-In Alameda and San Francisco counties, there are 521 POIs. Figure \ref{figure3} shows the POIs in two counties.  The center of the circle points to the worship place, and the size of the circle implies the number of visitors. Red POI indicates the average visitors at the baseline periods, and the blue indicates the pandemic periods. 
-
-
-\section{Data analysis}
-Thus far, data have been analyzed at census block level (cbg). For each census block, we know how many people attend religious services (and their size). Also, Social Distancing Metrics data provide the measures for social distancing for each POIs. In two counties, there are 1626 cbgs, and religious visitors are found in 904 cbgs. Many census block has very few visitors, and Covid data are mostly available at zip code level, and hence we need to aggregate cbgs into zip code level. 
-
-Census block is the smallest regional unit in the US border mapping, and zip code usually consists of a few census blocks. The problem is that some census blocks have multiple zip codes, because zip codes are technically not based on census block or tracts. There are some discussions on mapping between zip code and census tract on Slack. 
-
-\section{Model}
-As a preliminary
-\[
-Y_g = \alpha + \beta D_g + \gamma X_g + \epsilon_g 
-\]
-
-
-\section{This week...}
-Incorporating open census data.
-foot traffic in six key industries plus an aggregate measure of social distancing.
-
-\begin{figure}[h]
-	\centering
-	\caption{\small Percentile distribution of religious POIs in CA}
-	\includegraphics[width=0.8\textwidth, center]{./figures/1.percentile.png}
-	\captionsetup{width=1.0\textwidth}
-	\label{figure1}
-	%\caption*{\footnotesize Each $a$--$b$ group shows impact of closure on grades completed by 2011 for children who were between $a$ and $b$ years of age at the time of school closure. These results correspond to results from column 1 of Table \ref{regone} which had 5 age-at-closure groups. 
-\end{figure}
-
-\begin{figure}[h]
-	\centering
-	\caption{\small Changes in average visitors in CA}
-	\includegraphics[width=0.8\textwidth, center]{./figures/avg_visit.png}
-	\captionsetup{width=1.0\textwidth}
-	\label{figure2}
-	%\caption*{\footnotesize Each $a$--$b$ group shows impact of closure on grades completed by 2011 for children who were between $a$ and $b$ years of age at the time of school closure. These results correspond to results from column 1 of Table \ref{regone} which had 5 age-at-closure groups. 
-\end{figure}
-
-
-\begin{figure}[h]
-	\centering
-	\caption{\small Distribution of religious POIs in Alameda and San Francisco counties}
-	\includegraphics[width=0.85\textwidth, center]{./figures/2.POIs.png}
-	\captionsetup{width=1.0\textwidth}
-	\label{figure3}
-	%\caption*{\footnotesize Each $a$--$b$ group shows impact of closure on grades completed by 2011 for children who were between $a$ and $b$ years of age at the time of school closure. These results correspond to results from column 1 of Table \ref{regone} which had 5 age-at-closure groups. 
-\end{figure}
-
-
-
-
-\pagebreak
-\begingroup
-\setstretch{1.0}
-%\setstretch{1.1}
-\setlength\bibitemsep{0pt}
-%\printbibliography
-\endgroup
-\pagebreak
-
-
-
-
+	
+%	\subsection{Classify the  places} 
+%	
+%	The next step is to figure out the size of the POIs and whether they closes during the pandemic. Two things are worth to be mentioned. First, if the number of unique visitors are less than 4, SafeGraph does not reveal where the visitors' home census block because of privacy issues. The main point is how the visitors' behavior, not the religious places, we only keep the POIs having more than 4 unique visitors in 2020. Second, the baseline periods (prior to pandemic) are January and February. The pandemic period starts at March 6th. On March 6, San Francisco warns vulnerable residents to avoid outings and larger groups, businesses to suspend non-essential travel and consider telecommuting, and cancellation of all non-essential large events, and the city began restricting event size a few days later. By March 16, six Bay Area counties became the first in the nation to announce shelter-in-place orders and on March 19, the State of California became the first to mandate a state-wide order. Hence, to construct the baseline behavior we use 8 waves of the Weekly Places Patterns starting from 12.30.2019 to 2020.02.17\footnote{Last wave covers 2.17 to 2.23.}. For the pandemic periods, we use 4 waves starting from 2020.03.02 to 2020.03.23. 
+%	
+%	After removing the POIs having less than 4 unique visitors, the number of POIs are 8439. In terms of base period, the median number of visitors of the religious POIs is 14. Figure \ref{figure1} shows the percentile distribution of unique visitors in religious POIs of California. We choose 30, about 80 percentile, as the threshold indicating whether POIs are large or not. Figure \ref{figure2} indicates the average number of unique visitors in small and large POIs.
+%	
+%	Next, we classify the POIs which is closed during pandemic in the following ways. First, the number of unique visitors is zero during pandemic. Second, for the large POIs, the number of visitors fall down less than 5. Third, the attendance rate compared to base period is less than 5 percent.  
+%	
+	\section{Regional distribution}
+	SafeGraph shows the visitor's home census block group for each POI. In other words, for each census block group, we can explore what POIs the residents visit as long as the number is not too small.
+	
+	There are 38,855 CBGs in which the residents visit the selected POIs in four states. Since most Covid related data are accessible at county level, we aggregate it into county level.  
+	
+	% if we select four states, we need to rule out many counties since the selected counties did not capture the relisiougs visisits properly if the counties are not in four states.
+	
+	
+	
+	
+	 how many residents attend a service happening at the religious POIs. For example, we can explore how many POIs are and their attendance in each census block every week. It is possible that a Californian attends the worship in different states. We will restrict the focus onto Alameda and San Francisco counties  which are very far from the border, so it won't be a concern. 
+	
+	
+	
+	
+	
+	
+	\subsection{POI map}
+	In Alameda and San Francisco counties, there are 521 POIs. Figure \ref{figure3} shows the POIs in two counties.  The center of the circle points to the worship place, and the size of the circle implies the number of visitors. Red POI indicates the average visitors at the baseline periods, and the blue indicates the pandemic periods. 
+	
+	
+	\section{Data analysis}
+	Thus far, data have been analyzed at census block level (cbg). For each census block, we know how many people attend religious services (and their size). Also, Social Distancing Metrics data provide the measures for social distancing for each POIs. In two counties, there are 1626 cbgs, and religious visitors are found in 904 cbgs. Many census block has very few visitors, and Covid data are mostly available at zip code level, and hence we need to aggregate cbgs into county level. 
+	
+%	Census block is the smallest regional unit in the US border mapping, and zip code usually consists of a few census blocks. The problem is that some census blocks have multiple zip codes, because zip codes are technically not based on census block or tracts. There are some discussions on mapping between zip code and census tract on Slack. 
+	
+	\section{Model}
+	As a preliminary
+	\[
+	Y_{ct} = \alpha_c+\lambda_t + \beta D_{ct} + \gamma X_{ct} + \epsilon_{ct} 
+	\]
+	$Y_{ct}$ is the outcome. It is either new cases (or death) per capita in county $c$ at time $t$, or proportion of people staying at home. $D_{ct}$ is the exposure to service visitors, $\frac{num\;visit}{num\;device}$ in county $c$ at $t$. 
+	
+	Prior to analyze the main model, note that the simple first stage. We define the pre period before February and pandemic period is march. It is very uncertain that attendance has a causal effect after March since most measures converge at early April. We hypothesize that the change in exposure rate during March depends on the size of POIs, since the large gathering places more quickly respond at the beginning. Hence, the difference in exposure rate at this moment could be proportionally related to the size.    
+	\[
+	\%\Delta D_{c,prior - pandemic} = \beta Z_{c,prioir} + County_c + num visit_{prior}+ \eta_{c}
+	\]
+	where
+	\[
+	Z_{c, prior} = \frac{num\;large\;visitors_{c,prior}}{numvisit_{c,prior}}
+	\]
+	
+%	\section{This week...}
+%	Incorporating open census data.
+%	foot traffic in six key industries plus an aggregate measure of social distancing.
+	
+	\begin{figure}[h]
+		\centering
+		\caption{\small Percentile distribution of religious POIs in CA}
+		\includegraphics[width=0.8\textwidth, center]{./figures/1.percentile.png}
+		\captionsetup{width=1.0\textwidth}
+		\label{figure1}
+		%\caption*{\footnotesize Each $a$--$b$ group shows impact of closure on grades completed by 2011 for children who were between $a$ and $b$ years of age at the time of school closure. These results correspond to results from column 1 of Table \ref{regone} which had 5 age-at-closure groups. 
+	\end{figure}
+	
+	\begin{figure}[h]
+		\centering
+		\caption{\small Changes in average visitors in CA}
+		\includegraphics[width=0.8\textwidth, center]{./figures/avg_visit.png}
+		\captionsetup{width=1.0\textwidth}
+		\label{figure2}
+		%\caption*{\footnotesize Each $a$--$b$ group shows impact of closure on grades completed by 2011 for children who were between $a$ and $b$ years of age at the time of school closure. These results correspond to results from column 1 of Table \ref{regone} which had 5 age-at-closure groups. 
+	\end{figure}
+	
+	
+	\begin{figure}[h]
+		\centering
+		\caption{\small Distribution of religious POIs in Alameda and San Francisco counties}
+		\includegraphics[width=0.85\textwidth, center]{./figures/2.POIs.png}
+		\captionsetup{width=1.0\textwidth}
+		\label{figure3}
+		%\caption*{\footnotesize Each $a$--$b$ group shows impact of closure on grades completed by 2011 for children who were between $a$ and $b$ years of age at the time of school closure. These results correspond to results from column 1 of Table \ref{regone} which had 5 age-at-closure groups. 
+	\end{figure}
+	
+	
+	
+	
+	\pagebreak
+	\begingroup
+	\setstretch{1.0}
+	%\setstretch{1.1}
+	\setlength\bibitemsep{0pt}
+	%\printbibliography
+	\endgroup
+	\pagebreak
+	
+	
+	
+	
 \end{document}
 
 \begin{equation}
-\label{eq:targetcost}
-Z\left(\tau,\delta\right) =
-\sum\limits_{
+	\label{eq:targetcost}
+	Z\left(\tau,\delta\right) =
+	\sum\limits_{
+		\substack{
+			\mathrm{cohort} \\ \in{\left\{70,72,74,76\right\}}}
+	}
+	\left\{\delta\cdot
+	\int_{\epsilon}
+	\int_{Y_{min}}^{F_{Y}^{-1}\left(\tau\right)}
+	\int_{X}
+	N\Big(
 	\substack{
-		\mathrm{cohort} \\ \in{\left\{70,72,74,76\right\}}}
-}
-\left\{\delta\cdot
-\int_{\epsilon}
-\int_{Y_{min}}^{F_{Y}^{-1}\left(\tau\right)}
-\int_{X}
-N\Big(
-\substack{
-	Y,X,\epsilon; \\
-	\delta, \Gamma_{\mathrm{cohort}}
-}
-\Big)f\left(X|Y\right)f\left(Y\right)f\left(\epsilon\right)\mathrm{d}X\mathrm{d}Y\mathrm{d}\epsilon\right\}
+		Y,X,\epsilon; \\
+		\delta, \Gamma_{\mathrm{cohort}}
+	}
+	\Big)f\left(X|Y\right)f\left(Y\right)f\left(\epsilon\right)\mathrm{d}X\mathrm{d}Y\mathrm{d}\epsilon\right\}
 \end{equation}
 

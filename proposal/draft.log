@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  29 JUL 2020 18:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  4 AUG 2020 13:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1484,60 +1484,68 @@ File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 ) [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<./figures/1.percentile.png, id=93, 433.62pt x 289.08pt>
+Overfull \hbox (10.61179pt too wide) in paragraph at lines 48--49
+[]\T1/ppl/m/n/12 We set the base-line pe-riod prior to pan-demic, se-lect-ing t
+he nine waves from 11.25.2019
+ []
+
+[3]
+<./figures/1.percentile.png, id=86, 433.62pt x 289.08pt>
 File: ./figures/1.percentile.png Graphic file (type png)
 <use ./figures/1.percentile.png>
-Package pdftex.def Info: ./figures/1.percentile.png  used on input line 69.
-(pdftex.def)             Requested size: 362.37569pt x 241.59486pt.
- [3]
-<./figures/avg_visit.png, id=102, 433.62pt x 289.08pt>
-File: ./figures/avg_visit.png Graphic file (type png)
-<use ./figures/avg_visit.png>
-Package pdftex.def Info: ./figures/avg_visit.png  used on input line 78.
+Package pdftex.def Info: ./figures/1.percentile.png  used on input line 108.
 (pdftex.def)             Requested size: 362.37569pt x 241.59486pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figures/2.POIs.png, id=103, 1333.98375pt x 880.28876pt>
+<./figures/avg_visit.png, id=88, 433.62pt x 289.08pt>
+File: ./figures/avg_visit.png Graphic file (type png)
+<use ./figures/avg_visit.png>
+Package pdftex.def Info: ./figures/avg_visit.png  used on input line 117.
+(pdftex.def)             Requested size: 362.37569pt x 241.59486pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./figures/2.POIs.png, id=89, 1333.98375pt x 880.28876pt>
 File: ./figures/2.POIs.png Graphic file (type png)
 <use ./figures/2.POIs.png>
-Package pdftex.def Info: ./figures/2.POIs.png  used on input line 88.
+Package pdftex.def Info: ./figures/2.POIs.png  used on input line 127.
 (pdftex.def)             Requested size: 385.02547pt x 254.06831pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4 <./figures/1.percentile.png>] [5 <./figures/avg_visit.png> <./figures/2.POIs
-.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 109.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 109.
+[4] [5 <./figures/1.percentile.png> <./figures/avg_visit.png>] [6 <./figures/2.
+POIs.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 148.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 148.
  (./draft.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 109.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 109.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 148.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 148.
 Package rerunfilecheck Info: File `draft.out' has not changed.
-(rerunfilecheck)             Checksum: 27B9FA329B949EFAB94DC694074DAAC4;458.
+(rerunfilecheck)             Checksum: F15AD1E1A96F2C2AA89307ED73B46C03;320.
 Package logreq Info: Writing requests to 'draft.run.xml'.
 \openout1 = `draft.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37742 strings out of 480608
- 742893 string characters out of 5903631
+ 37741 strings out of 480608
+ 742849 string characters out of 5903631
  1592688 words of memory out of 5000000
- 52901 multiletter control sequences out of 15000+600000
- 578373 words of font info for 124 fonts, out of 8000000 for 9000
+ 52899 multiletter control sequences out of 15000+600000
+ 578809 words of font info for 126 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,12n,105p,1281b,4001s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,12n,105p,1263b,4001s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2020/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local
 /texlive/2020/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/loc
 al/texlive/2020/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texl
 ive/2020/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/202
 0/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on draft.pdf (5 pages, 807982 bytes).
+Output written on draft.pdf (6 pages, 812299 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
- 96 compressed objects within 1 object stream
- 17 named destinations out of 1000 (max. 500000)
- 236 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 133 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
+ 16 named destinations out of 1000 (max. 500000)
+ 220 words of extra memory for PDF output out of 10000 (max. 10000000)
 
